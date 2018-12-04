@@ -15,7 +15,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="username" elementType="Argument">
             <stringProp name="Argument.name">username</stringProp>
-            <stringProp name="Argument.value">${__P(propertyname,&lt;deefault value here&gt;)}</stringProp>
+            <stringProp name="Argument.value">${__P(propertyname,&lt;default value here&gt;)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">getting property value</stringProp>
           </elementProp>
@@ -108,10 +108,11 @@
             <stringProp name="-682508665">randSplStr</stringProp>
             <stringProp name="12278605">randAlpNumSplChrStr</stringProp>
             <stringProp name="249107827">randDate</stringProp>
+            <stringProp name="1270646108">randTrueSpl</stringProp>
             <stringProp name="249644017">randVars</stringProp>
           </collectionProp>
           <collectionProp name="UserParameters.thread_values">
-            <collectionProp name="47252277">
+            <collectionProp name="309647743">
               <stringProp name="-1194545551">${__RandomString(10,abcdefghijklmnopqrstuvwxyz)}</stringProp>
               <stringProp name="-1570444687">${__Random(0000,100000)}</stringProp>
               <stringProp name="307886281">${__RandomString(10,0123456789)}</stringProp>
@@ -119,7 +120,8 @@
               <stringProp name="-904836351">${__RandomString(10,~!@#$%^&amp;*()_+=-}{][|\”’:;?&gt;&lt;./\,)}</stringProp>
               <stringProp name="1053091379">${__RandomString(10,abcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&amp;*()_+=-}{][|\”’:;?&gt;&lt;\,./)}</stringProp>
               <stringProp name="680580593">${__RandomDate(,,2018-05-30,,)}</stringProp>
-              <stringProp name="1935982743">${__RandomFromMultipleVars(randStr|randNum|randomStringNum|randAlpNumStr|randSplStr|randAlpNumSplChrStr|randDate,)}</stringProp>
+              <stringProp name="-1792614820">${__RandomString(10,ÀËÌŃÇŽ)}</stringProp>
+              <stringProp name="2112533303">${__RandomFromMultipleVars(randStr|randTrueSpl|randNum|randomStringNum|randAlpNumStr|randSplStr|randAlpNumSplChrStr|randDate,)}</stringProp>
             </collectionProp>
           </collectionProp>
           <boolProp name="UserParameters.per_iteration">true</boolProp>
@@ -1016,10 +1018,11 @@ vars.put(&quot;capitalizeCase&quot;,smallCase);</stringProp>
             <stringProp name="-682508665">randSplStr</stringProp>
             <stringProp name="12278605">randAlpNumSplChrStr</stringProp>
             <stringProp name="249107827">randDate</stringProp>
+            <stringProp name="1270646108">randTrueSpl</stringProp>
             <stringProp name="249644017">randVars</stringProp>
           </collectionProp>
           <collectionProp name="UserParameters.thread_values">
-            <collectionProp name="47252277">
+            <collectionProp name="309647743">
               <stringProp name="-1194545551">${__RandomString(10,abcdefghijklmnopqrstuvwxyz)}</stringProp>
               <stringProp name="-1570444687">${__Random(0000,100000)}</stringProp>
               <stringProp name="307886281">${__RandomString(10,0123456789)}</stringProp>
@@ -1027,7 +1030,8 @@ vars.put(&quot;capitalizeCase&quot;,smallCase);</stringProp>
               <stringProp name="-904836351">${__RandomString(10,~!@#$%^&amp;*()_+=-}{][|\”’:;?&gt;&lt;./\,)}</stringProp>
               <stringProp name="1053091379">${__RandomString(10,abcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&amp;*()_+=-}{][|\”’:;?&gt;&lt;\,./)}</stringProp>
               <stringProp name="680580593">${__RandomDate(,,2018-05-30,,)}</stringProp>
-              <stringProp name="1935982743">${__RandomFromMultipleVars(randStr|randNum|randomStringNum|randAlpNumStr|randSplStr|randAlpNumSplChrStr|randDate,)}</stringProp>
+              <stringProp name="-1792614820">${__RandomString(10,ÀËÌŃÇŽ)}</stringProp>
+              <stringProp name="2112533303">${__RandomFromMultipleVars(randStr|randTrueSpl|randNum|randomStringNum|randAlpNumStr|randSplStr|randAlpNumSplChrStr|randDate,)}</stringProp>
             </collectionProp>
           </collectionProp>
           <boolProp name="UserParameters.per_iteration">true</boolProp>
@@ -2140,6 +2144,42 @@ vars.put(&quot;capitalizeCase&quot;,smallCase);</stringProp>
           </value>
         </objProp>
         <stringProp name="filename">~/results/${__time(YMD)}/aggregateReport_${__time(hh:mm:ss)}.jtl</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
