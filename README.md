@@ -12,7 +12,7 @@
 
 # Cloud utils
 1. To get public IP of AWS
->wget -q -O - http://169.254.169.254/latest/meta-data/public-hostname
+    >wget -q -O - http://169.254.169.254/latest/meta-data/public-hostname
 
->curl http://169.254.169.254/latest/metadata
+    >curl http://169.254.169.254/latest/metadata
 2.
