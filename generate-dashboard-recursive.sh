@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-set -e
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+set -eux
 
 #Delete existing dashboards if any
 find . -mindepth 1 -maxdepth 1 -type d -exec rm -rf {}/result \;
