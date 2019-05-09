@@ -8,7 +8,10 @@
 
 2. If jtl file is not being written then use 
     > -Jjmeter.save.saveservice.autoflush=true
-
+3. If summarizer is to be disabled(to prevent logs from being sent to Splunk) 
+    > -Jsummariser.out=false
+4. If log level is to changed 
+    > -Lorg.apache.http=ERROR
 
 # Cloud utils
 1. To get public IP of AWS
