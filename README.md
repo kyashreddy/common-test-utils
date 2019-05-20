@@ -12,6 +12,8 @@
     > -Jsummariser.out=false
 4. If log level is to changed 
     > -Lorg.apache.http=ERROR
+5. To disable nashorn warnings
+    > -Dnashorn.args="--no-deprecation-warning"
 
 # Cloud utils
 1. To get public IP of AWS
