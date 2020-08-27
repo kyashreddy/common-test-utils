@@ -14,8 +14,9 @@
     > -Lorg.apache.http=ERROR
 5. To disable nashorn warnings
     > -Dnashorn.args="--no-deprecation-warning"
-6. To increase java heap size(other than in the jmeter.bat/sh)
+6. To increase java heap size(other than in the jmeter.bat/sh)(JAVA_TOOL_OPTIONS supercedes _JAVA_OPTIONS )
     > export _JAVA_OPTIONS="-Xms256m -Xmx4g" (in linux/mac)or SET _JAVA_OPTIONS = -Xms256m -Xmx4g (in windows) 
+    > Or export JAVA_TOOL_OPTIONS="-Xms512m -Xmx2g"
 
 # Cloud utils
 1. To get public IP of AWS
