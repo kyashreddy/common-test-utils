@@ -10,7 +10,6 @@ for TYPE in $(kubectl api-resources --namespaced=false -o name)
         mkdir -p $(dirname $DIRECTORY/$TYPE)
         kubectl get -o=yaml $TYPE > $DIRECTORY/$TYPE.yaml
      done
-done
 
 for NAMESPACE in $(kubectl get -o=name namespaces | cut -d '/' -f2)
 do
