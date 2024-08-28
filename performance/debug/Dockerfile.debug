@@ -1,0 +1,58 @@
+FROM ubuntu:20.04
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install --yes --no-install-recommends --quiet \
+    bird \
+    ca-certificates \
+    conntrack \
+    ctop \
+    curl \
+    dhcping \
+    dnsutils \
+    fping \
+    gdb \
+    git \
+    hey \
+    htop \
+    httpie \
+    iftop \
+    iperf \
+    ipset \
+    iptraf-ng \
+    iproute2 \
+    iputils-ping \
+    ipvsadm \
+    jq \
+    ldnsutils \
+    liboping-dev \
+    linux-tools-common \
+    mongodb-database-tools \
+    mtr \
+    mycli \
+    mysql-client \
+    netcat \
+    netgen \
+    nftables \
+    ngrep \
+    nmap \
+    pgcli \
+    postgresql-client \
+    redis-tools \
+    scapy \
+    socat \
+    software-properties-common \
+    strace \
+    tcpdump \
+    tcptraceroute \
+    termshark \
+    tmux \
+    tshark \
+    unzip \
+    vim \
+    wget \
+    wuzz && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+CMD ["sleep","3600"]
