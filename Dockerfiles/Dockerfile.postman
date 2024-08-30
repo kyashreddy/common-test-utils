@@ -1,0 +1,9 @@
+FROM node:22
+LABEL maintainer="Kudumula Yashwanth Reddy" 
+
+
+RUN curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+RUN npm install -g newman newman-reporter-htmlextra
+
+RUN newman -v
+RUN postman -v
